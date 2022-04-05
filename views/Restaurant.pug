@@ -2,4 +2,35 @@ extends layout
 
 block content
   h1= title
-  
+  p Welcome to the Restaurant pug 
+  div(class="container-fluid")
+        div(class="row")
+            -
+                let Restaurant = [
+                    {
+                        "Item name": "Biryani",
+                        "Quantity": 2,
+                        "cost": "$23"
+                    },
+                    {
+                        "Item name": "Startus",
+                        "Quantity": 3,
+                        "cost": "$19"
+
+                    },
+                    {
+                        "Item name": "Mango lassi",
+                        "Quantity": 1,
+                        "cost": "$6"
+                    },
+                ]
+                each x,index in Restaurant 
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.Itemname}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.Quantity}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.cost} 
+    script.                  
+          function buy(intemNo)
+          {
+                 alert(`you purchased Item ${intemNo+1}`)
+                 
+          }                  
