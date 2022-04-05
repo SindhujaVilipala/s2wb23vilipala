@@ -2,5 +2,12 @@ extends layout
 
 block content
   h1= title
-  p Hi this is sindhuja Vilipala #{title}
-  button(type="button", class="btn btn-secondary") Press Me
+  p Hi this is sindhuja Vilipala #{title} 
+  button(type="button", class="btn btn-danger",onclick="moreClaps()") Press Me
+  div(id="target") Clap for me 
+  script.
+    var clap_count=0;
+     function moreClaps(){
+       clap_count ++;
+       document.getElementById("target").innerHTML=`Clap${clap_count}`;
+     }
