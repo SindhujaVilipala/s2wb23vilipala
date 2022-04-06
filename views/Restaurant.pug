@@ -22,10 +22,10 @@ block content
                         "price": "Ten USD"
                     },                   
                 ]
-            each v,index in Restaurant
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.Itemname}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.Quantity}
-                div(class="col-sm-2" onclick=`buy(${index})`) #{v.price}
+            each q,index in Restaurant
+                div(class="col-sm-2" onclick=`buy(${index})`) #{q.Itemname}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{q.Quantity}
+                div(class="col-sm-2" onclick=`buy(${index})`) #{q.price}
   script.                
         function buy(intemNo)
         {
