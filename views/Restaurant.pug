@@ -8,29 +8,23 @@ block content
             -
                 let Restaurant = [
                     {
-                        "Item name": "Biryani",
+                        "Itemname": "Biryani",
                         "Quantity": 2,
-                        "cost":" Two USD"
+                        "cost": "Two USD"
                     },
                     {
-                        "Item name": "Startus",
+                        "Itemname": "Startus",
                         "Quantity": 3,
-                        "cost": " Three USD"
-
+                        "cost": "Three USD"
                     },
                     {
-                        "Item name": "Mango lassi",
+                        "Itemname": "Mangolassi",
                         "Quantity": 1,
-                        "cost":" Five USD"
+                        "cost": "Five USD"
                     },
                 ]
-                each x,index in Restaurant 
-                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.Itemname}
-                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.Quantity}
-                    div(class="col-sm-2" onclick=`buy(${index})`) #{x.cost} 
-    script.                  
-          function buy(intemNo)
-          {
-                 alert(`you purchased Item ${intemNo+1}`)
-
-          }                  
+                each q,index in Restaurant 
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{q.Itemname}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{q.Quantity}
+                    div(class="col-sm-2" onclick=`buy(${index})`) #{q.cost} 
+              
